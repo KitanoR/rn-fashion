@@ -13,7 +13,7 @@ interface TextInputProps extends RNTexInputProps {
 const TextInput = ({ icon, touched, error, ...props }: TextInputProps) => {
     const theme = useTheme();
 
-    const SIZE = theme.borderRadii.m * 2;
+    const SIZE = theme.borderRadii.m * 2.5;
 
     const reColor = !touched ? "text" : (error ? "danger"  : "primary");
     const color = theme.colors[reColor];
@@ -46,7 +46,9 @@ const TextInput = ({ icon, touched, error, ...props }: TextInputProps) => {
                         backgroundColor={(!error) ? "primary" : "danger"}
                         height={SIZE} 
                         width={SIZE} 
-                        borderRadius="m">
+                        borderRadius="m"
+
+                    >
                         <Icon 
                             size={14}
                             name={!error ? "check" : "x"} color="white" />
