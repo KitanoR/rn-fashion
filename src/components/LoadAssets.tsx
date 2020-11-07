@@ -1,5 +1,5 @@
 import React, { ReactElement, useCallback, useEffect, useState } from "react";
-import { AsyncStorage } from "react-native";
+import { AsyncStorage, StatusBar } from "react-native";
 import { AppLoading } from "expo";
 import { Asset } from "expo-asset";
 import * as Font from "expo-font";
@@ -65,6 +65,7 @@ const LoadAssets = ({ assets, fonts, children }: LoadAssetsProps) => {
   }
   return (
     <NavigationContainer {...{ onStateChange, initialState }}>
+      <StatusBar hidden/>
       {children}
     </NavigationContainer>
   );
