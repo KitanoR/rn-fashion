@@ -29,8 +29,8 @@ const slides = [
     },
     {
         title: "Playful",
-        subtitle: "Hear it First, Wear it First", 
-        description: "Hating the clothes in your wardrobe? Explore hundreds of outfit ideas", 
+        subtitle: "Wear it First", 
+        description: "Hating the clothes in your wardrobe? Explore outfit ideas", 
         color: "#BEECC4",
         picture: {
             src: imagen3,

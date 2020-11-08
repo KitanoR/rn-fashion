@@ -1,9 +1,11 @@
 import React, { useRef } from 'react';
+import { TextInput as RNTexInput } from 'react-native';
 import { Container, Button, Text, Box } from '../../components';
 import TextInput from '../../components/Form/TextInput';
 import Checkbox from '../../components/Form/Checkbox';
 import Footer from '../components/Footer';
 import { useFormik } from 'formik';
+
 
 import * as Yup from "yup";
 import { Routes, StackNavigationProps } from '../../components/Navigation';
@@ -20,7 +22,7 @@ const LoginSchema = Yup.object().shape({
 
 
 export default ({ navigation }: StackNavigationProps<Routes, "SignUp">) => {
-    const passwordRef = useRef<typeof TextInput>();
+    const passwordRef = useRef<typeof RNTexInput>();
     const FooterComponent = <Footer
         title="Don't have an account?"
         action="Sign Up here"
@@ -78,7 +80,7 @@ export default ({ navigation }: StackNavigationProps<Routes, "SignUp">) => {
                         autoCompleteType="password"
                         returnKeyLabel="go"
                         returnKeyType="go"
-                        onSubmitEditing={handleSubmit}
+                        onSubmitEditing={() => handleSubmit()}
                         secureTextEntry
                     />
                     <Box flexDirection="row" justifyContent="space-between">

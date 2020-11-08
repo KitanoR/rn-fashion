@@ -1,9 +1,8 @@
 import React, { ReactNode } from "react";
-import { Image, StyleSheet, Dimensions, StatusBar, Platform } from "react-native";
+import { Image, StyleSheet, Dimensions, Platform } from "react-native";
 import { Box, makeStyles, Theme } from "./Theme";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
-import { Constants } from 'expo-constants';
 
 const { width, height: wHeight } = Dimensions.get("window");
 const aspectRatio = 190 / 376;
@@ -21,7 +20,7 @@ const Container = ({ children, footer }: ContainerProps) => {
 
   return (
     <KeyboardAwareScrollView scrollEnabled={false}>
-      <Box height={wHeight + (Platform.OS === 'android'? Constants.statusBarHeight : 0) } backgroundColor="secondary">
+      <Box height={wHeight + (Platform.OS === 'android'? 0 : 0) } backgroundColor="secondary">
         <Box backgroundColor="white">
           <Box
             overflow="hidden"
