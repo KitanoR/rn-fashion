@@ -14,6 +14,8 @@ export const theme: any = {
     "slide.grey": "#F4F0EF",
     danger: "#FF0058",
     darkGray: "#8A8D90",
+    black: "#000",
+    primaryLight: "#E7F9F7",
   },
   spacing: {
     s: 8,
